@@ -29,7 +29,6 @@ def get_tmp_folders():
     print("Detecting temporal folders")
     while len(directories) > 0:
         directory = directories.pop(0)
-        print(directory)
         candidate_folders = [f for f in os.listdir(directory) if isdir(join(directory, f))]
         if 'tmp' in candidate_folders:
             tmp_folders.append(directory + '/tmp')
